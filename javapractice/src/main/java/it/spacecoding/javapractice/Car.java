@@ -2,9 +2,9 @@ package it.spacecoding.javapractice;
 
 public class Car {
     // attibuti
-    private String mColour = "Black";
+    public String mColour = "Black";
     private int mNumberOfSeats = 4;
-    private String mInterior;
+    protected String mInterior;
     public int getNumberOfSeats() {
         return mNumberOfSeats;
     }
@@ -15,6 +15,7 @@ public class Car {
 
     // costruttore vuoto
     public Car(){
+        mInterior = "Leather"; // inizializzazione dell'attributo mInterior di default
     }
     // costruttore con parametri
     public Car(String chosenColour, String chosenInterior){
@@ -39,6 +40,8 @@ public class Car {
     }
 
     //metodi
-    public void drive(){}
+    public void drive(){
+        System.out.println("Car is moving");
+    }
 
 }
